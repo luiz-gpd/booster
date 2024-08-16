@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 const {
   PORT,
@@ -7,6 +7,11 @@ const {
   SYSTEM_TIMEZONE,
   PRIVATE_KEY_BASE64,
   PUBLIC_KEY_BASE64,
+  DB_HOST,
+  DB_USERNAME,
+  DB_NAME,
+  DB_PASSWORD,
+  DB_PORT,
 } = process.env;
 
 export {
@@ -15,4 +20,9 @@ export {
   SYSTEM_TIMEZONE,
   PRIVATE_KEY_BASE64,
   PUBLIC_KEY_BASE64,
+  DB_HOST,
+  DB_USERNAME,
+  DB_NAME,
+  DB_PASSWORD,
+  DB_PORT,
 };
