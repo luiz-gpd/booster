@@ -1,4 +1,4 @@
-const { DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT } = process.env;
+const { DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME } = process.env;
 
 module.exports = {
   type: 'postgres',
@@ -6,8 +6,8 @@ module.exports = {
   username: DB_USERNAME,
   password: DB_PASSWORD,
   database: DB_NAME,
-  port: DB_PORT,
-  entities: ['dist/**/*.js'],
-  // migrations: ["dist/database/migration/**/*.js"],
-  sincronize: true,
+  logging: false,
+  entities: ['dist/database/entity/**/*.js'],
+  migrations: ["dist/database/migrations/**/*.js"],
+  synchronize: true,
 };
